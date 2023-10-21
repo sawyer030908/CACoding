@@ -25,11 +25,10 @@ public class ClearViewModel extends ViewModel {
     public void addPropertyChangeListener(PropertyChangeListener listener) {
         support.addPropertyChangeListener(listener);
     }
-    public ClearState getClearState(){
-        return state;
-    }
 
-    public void setClearState(ClearState state){
+    public void setState(ClearState state){
         this.state = state;
     }
+
+    public ClearState getState() {return this.state; }
 }

@@ -97,11 +97,8 @@ public class FileUserDataAccessObject implements SignupUserDataAccessInterface, 
     }
 
     public List<String> getDeletedName() {
-        List<String> deletedName = new ArrayList<>();
-        for (String name: accounts.keySet()){
-            deletedName.add(name);
-            accounts.remove(name);
-        }
+        List<String> deletedName = new ArrayList<>(accounts.keySet());
+        accounts.clear();
         this.save();
         return deletedName;
     }

@@ -13,5 +13,11 @@ public class ClearOutputData {
         this.useCaseFailed = useCaseFailed;
     }
 
-    //处理String Name list
+    public String getNameText(){
+        String result = "";
+        for (String name: this.deleteNameList){
+            result += name + '\n';
+        }
+        return result;
+    }
 }
